@@ -1,31 +1,29 @@
-CTYPE html>
-<html>
-
-  <head>
-  <meta charset="utf-8">
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://jacopretorius.net/ -->
+<html class="wf-proximanova-n4-active wf-proximanova-n7-active wf-proximanova-i4-active wf-proximanova-i7-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>About Me</title>
+  <title>Quinn McHugh</title>
   <meta name="description" content="A blog for programmers, by a programmer.">
 
   <meta content="Jaco Pretorius" property="og:site_name">
   
-    <meta content="About Me" property="og:title">
-    <meta content="article" property="og:type">
-    <meta content="http://jacopretorius.net/about/" property="article:author">
-    <meta content="http://jacopretorius.net/about/" property="og:url">
+    <meta content="Jaco Pretorius" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="http://jacopretorius.net" property="og:url">
   
   
     <meta content="A blog for programmers, by a programmer." property="og:description">
   
-  
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://jacopretorius.net/about/">
-  <link rel="alternate" type="application/rss+xml" title="Jaco Pretorius" href="http://jacopretorius.net/feed.xml" />
+  <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./Jaco Pretorius_files/main.css">
+  <link rel="canonical" href="http://jacopretorius.net/">
+  <link rel="alternate" type="application/rss+xml" title="Jaco Pretorius" href="http://jacopretorius.net/feed.xml">
 
-  <script type="text/javascript" src="//use.typekit.net/xmg1tyj.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script async="" src="./Jaco Pretorius_files/analytics.js"></script><script type="text/javascript" src="./Jaco Pretorius_files/xmg1tyj.js"></script><style type="text/css"></style>
+  <style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><link rel="stylesheet" href="./Jaco Pretorius_files/l" media="all"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
 
@@ -34,16 +32,13 @@ CTYPE html>
 
       <div id="header">
   <div class="container">
-    <a href="/" id="logo">
-      <span class="visible-large">Jaco Pretorius</span>
-      <span class="visible-small">JP</span>
+    <a href="http://jacopretorius.net/" id="logo">
+	<span style="color: green; font-size: 150%; font-family: sanchez;" class="visible-large"> <b style="font-size: 120%; color: #cc4422;"> > </b> Quinn McHugh</span>
     </a>
     <nav>
       <ul>
-        <li id="about"><a href="/about/">About</a></li>
-        <li id="twitter"><a href="http://twitter.com/JacoPretorius">Twitter</a></li>
-        <li id="archive"><a href="/archive/">Archive</a></li>
-        <li id="rss"><a href="/feed.xml">RSS</a></li>
+        <li id="about" style="font-family: sanchez;"><a href="/about/">About</a></li>
+        <li id="posts" style="font-family: sanchez;"><a href="/posts/">Posts</a></li>
       </ul>
     </nav>
   </div>
@@ -51,23 +46,64 @@ CTYPE html>
 
 
       <div id="main" class="container">
-        <div id="layout">
+        
+<div class="landing-page">
 
-  <article class="post">
+  <div class="post">
     <header>
-      <h3><a href="/about/">About Me</a></h3>
+      <h3><a href="http://jacopretorius.net/2015/04/working-with-global-variables-in-angularjs.html">Working With Global Variables In AngularJS</a></h3>
+      <p class="post-meta"><span>Apr 6, 2015</span></p>
     </header>
-    <p>My name is Jaco Pretorius and this is my blog.<img align="right" title="A picture of me" src="/assets/me.png" alt="" width="194" height="300" style="margin-left: 2em;  margin-top: 1.5em;"></p>
+    <p>Consider the following Angular code:</p>
 
-<p>I was introduced to programming through the world of <a href="http://en.wikipedia.org/wiki/Turbo_Pascal" target="_blank">Turbo Pascal</a> and <a href="http://en.wikipedia.org/wiki/Logo_(programming_language)" target="_blank">Logo</a> and enjoyed it so much that I decided to make a career out of it. After a few years at University I spent two years learning <a href="http://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a> and doing financial programming in Cape Town. I then moved to Johannesburg where I learnt how the web works and became quite comfortable working on the <a href="http://aspnet.codeplex.com/">ASP.NET MVC</a> framework. In 2011 I packed my bags, left South Africa and moved to New York to join <a href="http://www.thoughtworks.com/" target="_blank">ThoughtWorks</a>.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">data-require=</span><span class="s">"angular.js@1.3.15"</span> <span class="na">data-semver=</span><span class="s">"1.3.15"</span> <span class="na">src=</span><span class="s">"https://code.angularjs.org/1.3.15/angular.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+    <span class="kd">var</span> <span class="nx">globalVariable</span> <span class="o">=</span> <span class="s2">"one"</span><span class="p">;</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">windowVariable</span> <span class="o">=</span> <span class="s2">"two"</span><span class="p">;</span>
+  <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
 
-<p>I currently work at a startup called <a href="http://gethightower.com/" target="_blank">Hightower</a>, trying to help change the future of commercial real estate.  I tend to blog about problems and solutions I encounter in my line of work. This journey has taken me through C#, ASP.NET MVC, Ruby, Rails, iOS and AngularJS.</p>
+<span class="nt">&lt;body</span> <span class="na">ng-app=</span><span class="s">"example"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Global Variable: <span class="nt">&lt;strong&gt;</span>{{ globalVariable }}<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+      Window Variable: <span class="nt">&lt;strong&gt;</span>{{ windowVariable }}<span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span></code></pre></div>
 
-<p>If you wish to contact me don’t hesitate to send an email to <script type="text/javascript">emailE=('me@' + 'jacopretorius.net');document.write('<a href="mailto:' + emailE + '">' + emailE + '</a>')</script>.</p>
+<p>The output might surprise you.</p>
 
-<p>You can also find me on <a href="http://twitter.com/JacoPretorius" target="_blank">Twitter</a>, <a href="https://github.com/Jaco-Pretorius" target="_blank">GitHub</a> and <a href="http://stackoverflow.com/users/121531/jaco-pretorius" target="_blank">StackOverflow</a>.</p>
+<p><img src="./Jaco Pretorius_files/working_with_global_variables_in_angularjs.png" alt="Output of Example"></p>
 
-  </article>
+<p>Both variables are undefined.  The key here is how Angular interprets the expressions between the curly braces.  You might expect Angular to do a simple <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval</a> on the code, but that is not the case - Angular actually uses JavaScript to parse these JavaScript-<em>like</em> syntax within the context of the current scope.</p>
+
+<p>This means we can’t simply access global variables or variables on window in these expressions.  There might be scenarios where you want to do exactly that - for example, feature flags are often rendered server-side and attached directly to <code>window</code> (or rendered as global variables).</p>
+
+<p>In order to access these inside template expressions you need to assign them to the scope.</p>
+
+<div class="highlight"><pre><code class="language-coffeescript" data-lang="coffeescript"><span class="nx">app</span><span class="p">.</span><span class="nx">controller</span> <span class="s">"ExampleController"</span><span class="p">,</span> <span class="nf">($scope, $window) -&gt;</span>
+  <span class="nv">$scope.globalVariable = </span><span class="nx">globalVariable</span>
+  <span class="nv">$scope.windowVariable = </span><span class="nx">$window</span><span class="p">.</span><span class="nx">windowVariable</span></code></pre></div>
+
+<p>You can find all the code on <a href="http://plnkr.co/edit/8FSW7yR8eYOdIXnUUbse?p=preview">Plunker</a>.  Happy coding.</p>
+
+
+    <p class="share">
+      <span>Share on:</span>
+      <a href="https://twitter.com/intent/tweet?url=http://jacopretorius.net/2015/04/working-with-global-variables-in-angularjs.html&amp;text=Working%20With%20Global%20Variables%20In%20AngularJS&amp;via=JacoPretorius">Twitter</a>,
+      <a href="https://facebook.com/sharer.php?u=http://jacopretorius.net/2015/04/working-with-global-variables-in-angularjs.html">Facebook</a>,
+      <a href="https://plus.google.com/share?url=http://jacopretorius.net/2015/04/working-with-global-variables-in-angularjs.html">Google+</a>
+      or use the <a href="http://jacopretorius.net/2015/04/working-with-global-variables-in-angularjs.html">Permalink</a>
+    </p>
+
+    <div class="comments">
+      <a href="http://jacopretorius.net/2015/04/working-with-global-variables-in-angularjs.html">Leave a Comment</a>
+    </div>
+  </div>
 
 </div>
 
@@ -86,8 +122,7 @@ CTYPE html>
   ga('send', 'pageview');
 </script>
 
-  </body>
-
-</html>
+  
 
 
+</body></html>
