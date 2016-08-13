@@ -575,3 +575,29 @@ pre {
 
   #header nav li#rss {
     display: none; } }
+
+/* Quinn McHugh CSS changes begin below */
+#header, #header span {
+  font-family: sanchez;
+}
+
+#logo {
+  color: green;
+}
+
+#logo .visible-large {
+  font-size: 150%;
+}
+
+#logo .visible-small {
+  font-size: 95%;
+}
+
+#logo b {
+  color: #cc4422;
+}
+
+nav .visible-large li {
+  font-size: 120%;
+  padding-top: 2%;
+}

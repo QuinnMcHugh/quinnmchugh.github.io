@@ -5,6 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="res/img/favicon.ico">
 
 		<title>Quinn McHugh</title>
 	  
@@ -20,10 +21,10 @@
 		<div id="layout">
 			<div id="header">
 				<div class="container">
-					<!-- prints out my name in the header -->
+					<!-- prints out mi nombre in the header -->
 					<a href="/" id="logo">
-						<span style="color: green; font-size: 150%; font-family: sanchez;" class="visible-large">
-							<b style="font-size: 120%; color: #cc4422;">> </b>
+						<span class="visible-large">
+							<b> > </b>
 							<script src="res/typed_js/typed.js"></script>
 							<script>
 								$(function(){
@@ -33,16 +34,42 @@
 									});
 								});
 							</script>
+							<!-- Empty span required for the JS above to work -->
 							<span class="element"></span>
 						</span>
-						<span class="visible-small">Quinn McHugh</span>
+						<span class="visible-small">
+							<b> > </b>
+							<script src="res/typed_js/typed.js"></script>
+							<script>
+								$(function(){
+									$(".element").typed({
+										strings: ["Quinn McHugh "],
+										typeSpeed: 75
+									});
+								});
+							</script>
+							<!-- Empty span required for the JS above to work -->
+							<span class="element"></span>
+						</span>
 					</a>
 					
-					<!-- navigation bar below -->
+					<!-- navigation bar (everything to the right of my name) -->
 					<nav>
-						<ul>
-							<li id="about" style="font-family: sanchez; font-size: 120%; padding-top: 5px;"><a href="/about/">About</a></li>
-							<li id="posts" style="font-family: sanchez; font-size: 120%; padding-top: 5px;"><a href="/posts/">Posts</a></li>
+						<ul class="visible-large">
+							<li id="about">
+								<a href="/about/">About</a>
+							</li>
+							<li id="posts">
+								<a href="/posts/">Posts</a>
+							</li>
+						</ul>
+						<ul class="visible-small">
+							<li id="about">
+								<a href="/about/">About</a>
+							</li>
+							<li id="posts">
+								<a href="/posts/">Posts</a>
+							</li>
 						</ul>
 					</nav>
 					
